@@ -1,0 +1,2072 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="jewelry, polymer clay, accessories" />
+  <meta name="description" content="Kleizin by SAF - Trendy polymer clay jewelry at affordable prices" />
+  <meta name="author" content="Kleizin by SAF" />
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <title>Kleizin by SAF</title>
+
+  <!-- Slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+  <!-- Bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- Responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
+  <style>
+    .card {
+      display: flex;
+      flex-direction: column;
+      height: 100%; /* Ensure card height */
+      overflow: hidden; /* Hide overflow content */
+      border: 1px solid #ddd; /* Add border to cards for better visibility */
+      position: relative; /* Position relative to contain the button */
+      margin-bottom: 1rem;
+    }
+    .card-img-top img {
+      width: 100%;
+      height: auto;
+      object-fit: cover; /* Ensure image covers the area */
+    }
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; /* Push button to the bottom */
+      padding: 15px;
+      height: 100%; /* Ensure body takes full height */
+    }
+    .detail-box {
+      margin-bottom: 5%; 
+    }
+    .btn-own-it {
+      display: inline-block;
+      padding: 8px 12px; /* Adjusted padding to decrease height */
+      background-color: #f16179;
+      color: #ffffff;
+      border: 1px solid #f16179;
+      border-radius: 5px;
+      text-decoration: none;
+      -webkit-transition: all .3s;
+      transition: all .3s;
+      text-align: center;
+      width: 100%; /* Full width for better responsiveness */
+    }
+    .btn-own-it:hover {
+      background-color: transparent;
+      color: #f16179;
+      border-color: #f16179;
+    }
+    .btn-own-it i {
+      margin: 5px;
+    }
+    .btn-customise {
+      display: inline-block;
+      padding: 8px 12px; /* Adjusted padding to decrease height */
+      background-color: transparent;
+      color: #f16179;
+      border: 1px solid #f16179;
+      border-radius: 5px;
+      text-decoration: none;
+      -webkit-transition: all .3s;
+      transition: all .3s;
+      text-align: center;
+      width: 100%; /* Full width for better responsiveness */
+    }
+    @media (max-width: 768px) {
+      .btn-own-it {
+        padding: 6px 10px; /* Adjust padding for smaller screens */
+        margin-top: 10px; /* Reduce top margin for smaller screens */
+      }
+    }
+    /* Ensure card does not overflow on large screens */
+    @media (min-width: 992px) {
+      .card {
+        height: auto; /* Let height adjust based on content */
+      }
+    }
+
+    /* Dropdown Button */
+    .filter-dropdown .dropdown-btn {
+      background-color: transparent;
+      color: #f16179;
+      border: 1px solid #f16179;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 4px;
+      position: relative; /* Relative positioning for dropdown content */
+      display: inline-block;
+      margin-top: 2%;
+      margin-left: 85%;
+    }
+
+    /* Hover effect for dropdown button */
+    .filter-dropdown .dropdown-btn:hover {
+      background-color: #f16179;
+      color: #fff;
+    }
+
+    /* Dropdown Content (Hidden by Default) */
+    .filter-dropdown .dropdown-content {
+      display: none; /* Hide dropdown content by default */
+      position: absolute; /* Position relative to the button */
+      background-color: #fff;
+      min-width: 200px;
+      border: 1px solid #f16179;
+      z-index: 900; /* Ensure dropdown content is above other content */
+      border-radius: 4px;
+      right: 2%; /* Align dropdown content to the right of the button */
+    }
+
+    /* Dropdown Links */
+    .filter-dropdown .dropdown-content a {
+      color: #f16179;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    /* Hover effect for dropdown links */
+    .filter-dropdown .dropdown-content a:hover {
+      background-color: #f16179;
+      color: #fff;
+    }
+
+    /* Show Dropdown on Button Click */
+    .filter-dropdown.show .dropdown-content {
+      display: block;
+    }
+
+    /* Mobile Styles */
+    @media (max-width: 768px) {
+      .filter-dropdown .dropdown-btn {
+        display: block; /* Ensure button is a block element */
+        margin: 0 auto; /* Center the button */
+        width: fit-content; /* Fit button width to content */
+      }
+
+      .filter-dropdown .dropdown-content {
+        position: static; /* Make dropdown content static on mobile screens */
+        width: 100%; /* Full width for better responsiveness */
+        left: 0; /* Align dropdown content to the left of the screen */
+      }
+    }
+    .sticky-row {
+  position: fixed;
+  top: 0; /* Distance from the top of the viewport */
+  left: 0;
+  right: 0; /* Make it full width */
+  background-color: #fff; /* Background color to avoid transparency issues */
+  z-index: 1000;
+  background-color: #f9f9f9;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: red; /* Optional: change color for visibility */
+    margin-right: 10px; /* Space between old and new price */
+  }
+  .new-price {
+    font-weight: bold;
+    color: green; /* Optional: change color for visibility */
+  }
+  </style>
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section starts -->
+    <div class="sticky-row">
+    <header class="header_section">
+      <nav class="navbar navbar-expand-lg custom_nav-container ml-4 mt-3">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class=""></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="shop.html">Shop <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="why.html">Why Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="heading_container">
+          <div class="filter-dropdown my-4">
+            <button class="dropdown-btn">Filter by <i class="fa fa-chevron-down"></i></button>
+            <div class="dropdown-content">
+              <a href="#" data-filter="all">All</a>
+              <a href="#" data-filter="studs">Studs</a>
+              <a href="#" data-filter="indian-collection">Indian Collection</a>
+              <a href="#" data-filter="Brown-house-collection">Brown House Collection</a>
+              <a href="#" data-filter="Kleizin-special">Only at Kleizin</a>
+              <a href="#" data-filter="keychains">Keychains</a>
+              <a href="#" data-filter="Unisex-bands">Unisex Bands</a>
+              <a href="#" data-filter="Bookmarks">Bookmarks</a>
+            </div>
+          </div> </div>
+        </div>
+    </header>
+    <!-- end hero area -->
+
+    <!-- shop section -->
+    <section class="shop_section layout_padding">
+      <div class="container mt-5 pt-3">
+        
+        <div class="row mt-5" id="product-grid">
+          <!-- Start of Product Card -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="indian-collection">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p1.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <h6 class="card-title">
+                  <span class="old-price">₹349/-</span> 
+                  <span class="new-price">₹249/-</span>
+                </h6>
+                <p class="card-text" style="font-size: 14px;">Independence Day Collection</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20010719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20010719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="Brown-house-collection">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p2.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <h6 class="card-title">
+                  <span class="old-price">₹349/-</span> 
+                  <span class="new-price">₹249/-</span>
+                </h6>
+                <p class="card-text" style="font-size: 14px;">Creamy Cascade</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20020719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20020719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="keychains">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p4.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <h6 class="card-title">
+                  <span class="old-price">₹149/-</span> 
+                  <span class="new-price">₹99/-</span>
+                </h6>
+                <p class="card-text" style="font-size: 14px;">Name Keychains</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20040719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20040719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="indian-collection">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p3.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <h6 class="card-title">
+                  <span class="old-price">₹349/-</span> 
+                  <span class="new-price">₹249/-</span>
+                </h6>
+                <p class="card-text" style="font-size: 14px;">Independence Day Collection</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20030719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20030719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="Brown-house-collection">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p5.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <h6 class="card-title">
+                  <span class="old-price">₹349/-</span> 
+                  <span class="new-price">₹249/-</span>
+                </h6>
+                <p class="card-text" style="font-size: 14px;">Mocha Leaves</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20050719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20050719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="Kleizin-special">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p7.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <h6 class="card-title">
+                  <span class="old-price">₹349/-</span> 
+                  <span class="new-price">₹249/-</span>
+                </h6>
+                <p class="card-text" style="font-size: 14px;">L-uxe</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20070719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20070719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p8.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <span class="new-price">₹89/-</span>
+                <p class="card-text" style="font-size: 14px;">Studs</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20080719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20080719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="keychains">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p6.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <h6 class="card-title">
+                  <span class="old-price">₹149/-</span> 
+                  <span class="new-price">₹99/-</span>
+                </h6>
+                <p class="card-text" style="font-size: 14px;">Pizza Keychain</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20060719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20060719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="Kleizin-special">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p9.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <h6 class="card-title">
+                  <span class="old-price">₹349/-</span> 
+                  <span class="new-price">₹249/-</span>
+                </h6>
+                <p class="card-text" style="font-size: 14px;">U-nicorn</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20090719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20090719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="indian-collection">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p10.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <h6 class="card-title">
+                  <span class="old-price">₹199/-</span> 
+                  <span class="new-price">₹149/-</span>
+                </h6>
+                <p class="card-text" style="font-size: 14px;">Independence Day Collection</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20100719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20100719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="studs">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p11.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <span class="new-price">₹89/-</span>
+                <p class="card-text" style="font-size: 14px;">Studs</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20110719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20110719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="Unisex-bands">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p12.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <h6 class="card-title">
+                  <span class="old-price">₹149/-</span> 
+                  <span class="new-price">₹99/-</span>
+                </h6>
+                <p class="card-text" style="font-size: 14px;">Bands</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20120719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20120719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="indian-collection">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p13.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <h6 class="card-title">
+                  <span class="old-price">₹199/-</span> 
+                  <span class="new-price">₹149/-</span>
+                </h6>
+                <p class="card-text" style="font-size: 14px;">Independence Day Collection</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20130719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20130719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="Brown-house-collection">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p14.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <h6 class="card-title">
+                  <span class="old-price">₹349/-</span> 
+                  <span class="new-price">₹249/-</span>
+                </h6>
+                <p class="card-text" style="font-size: 14px;">Caramel Crest</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20140719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20140719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="studs">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p15.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <span class="new-price">₹89/-</span>
+                <p class="card-text" style="font-size: 14px;">Studs</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20150719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20150719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="indian-collection">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p16.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <h6 class="card-title">
+                  <span class="old-price">₹349/-</span> 
+                  <span class="new-price">₹249/-</span>
+                </h6>
+                <p class="card-text" style="font-size: 14px;">Independence Day Collection</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20160719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20160719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="studs">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p17.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <span class="new-price">₹89/-</span>
+                <p class="card-text" style="font-size: 14px;">Studs</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20170719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20170719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="studs">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p18.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <span class="new-price">₹89/-</span>
+                <p class="card-text" style="font-size: 14px;">Studs</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20180719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20180719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="indian-collection">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p19.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <h6 class="card-title">
+                  <span class="old-price">₹349/-</span> 
+                  <span class="new-price">₹249/-</span>
+                </h6>
+                <p class="card-text" style="font-size: 14px;">Independence Day Collection</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20190719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20190719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="Unisex-bands">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p20.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <h6 class="card-title">
+                  <span class="old-price">₹149/-</span> 
+                  <span class="new-price">₹99/-</span>
+                </h6>
+                <p class="card-text" style="font-size: 14px;">Bands</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20200719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20200719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="indian-collection">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p21.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <h6 class="card-title">
+                  <span class="old-price">₹149/-</span> 
+                  <span class="new-price">₹99/-</span>
+                </h6>
+                <p class="card-text" style="font-size: 14px;">Keychain</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20210719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20210719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="studs">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p22.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <span class="new-price">₹89/-</span>
+                <p class="card-text" style="font-size: 14px;">Studs</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20220719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20220719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="keychains">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p23.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <h6 class="card-title">
+                  <span class="old-price">₹149/-</span> 
+                  <span class="new-price">₹99/-</span>
+                </h6>
+                <p class="card-text" style="font-size: 14px;">Keychain</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20230719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20230719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="studs">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p24.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <span class="new-price">₹89/-</span>
+                <p class="card-text" style="font-size: 14px;">Studs</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20240719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20240719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="studs">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p25.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <span class="new-price">₹89/-</span>
+                <p class="card-text" style="font-size: 14px;">Studs</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20250719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20250719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="studs">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p26.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <span class="new-price">₹89/-</span>
+                <p class="card-text" style="font-size: 14px;">Studs</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20260719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20260719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="indian-collection">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p27.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <h6 class="card-title">
+                  <span class="old-price">₹149/-</span> 
+                  <span class="new-price">₹99/-</span>
+                </h6>
+                <p class="card-text" style="font-size: 14px;">Band</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20270719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20270719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="studs">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p28.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <span class="new-price">₹89/-</span>
+                <p class="card-text" style="font-size: 14px;">Studs</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20280719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20280719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="indian-collection">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p29.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <span class="new-price">₹89/-</span>
+                <p class="card-text" style="font-size: 14px;">Brooch</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20290719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20290719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p30.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <span class="new-price">₹89/-</span>
+                <p class="card-text" style="font-size: 14px;">Brooch</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20300719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20300719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="studs">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p31.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <span class="new-price">₹89/-</span>
+                <p class="card-text" style="font-size: 14px;">Studs</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20310719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20310719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="studs">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p32.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <span class="new-price">₹89/-</span>
+                <p class="card-text" style="font-size: 14px;">Studs</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20320719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20320719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="studs">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p33.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <span class="new-price">₹89/-</span>
+                <p class="card-text" style="font-size: 14px;">Studs</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20330719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20330719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="studs">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p34.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <span class="new-price">₹89/-</span>
+                <p class="card-text" style="font-size: 14px;">Studs</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20340719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20340719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="studs">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p35.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <span class="new-price">₹89/-</span>
+                <p class="card-text" style="font-size: 14px;">Studs</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20350719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20350719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="studs">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p36.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <span class="new-price">₹89/-</span>
+                <p class="card-text" style="font-size: 14px;">Studs</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20360719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20360719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="studs">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p37.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <span class="new-price">₹89/-</span>
+                <p class="card-text" style="font-size: 14px;">Studs</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20370719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20370719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="studs">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p38.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <span class="new-price">₹89/-</span>
+                <p class="card-text" style="font-size: 14px;">Studs</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20380719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20380719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="Brown-house-collection">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p39.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <<h6 class="card-title">
+                  <span class="old-price">₹349/-</span> 
+                  <span class="new-price">₹249/-</span>
+                </h6>
+                <p class="card-text" style="font-size: 14px;">Caramel Crest</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20390719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20390719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="studs">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p40.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <span class="new-price">₹89/-</span>
+                <p class="card-text" style="font-size: 14px;">Studs</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20400719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20400719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="indian-collection">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p41.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <span class="new-price">₹89/-</span>
+                <p class="card-text" style="font-size: 14px;">Studs</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20410719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20410719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="studs">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p42.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <span class="new-price">₹89/-</span>
+                <p class="card-text" style="font-size: 14px;">Studs</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20420719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20420719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="studs">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p43.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <span class="new-price">₹89/-</span>
+                <p class="card-text" style="font-size: 14px;">Studs</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20430719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20430719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="indian-collection">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p44.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <span class="new-price">₹89/-</span>
+                <p class="card-text" style="font-size: 14px;">Studs</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20440719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20440719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="studs">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p45.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <span class="new-price">₹89/-</span>
+                <p class="card-text" style="font-size: 14px;">Studs</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20450719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20450719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="Kleizin-special">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p46.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <h6 class="card-title">
+                  <span class="old-price">₹349/-</span> 
+                  <span class="new-price">₹249/-</span>
+                </h6>
+                <p class="card-text" style="font-size: 14px;">L-uxe</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20460719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20460719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="keychains">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p47.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <h6 class="card-title">
+                  <span class="old-price">₹149/-</span> 
+                  <span class="new-price">₹99/-</span>
+                </h6>
+                <p class="card-text" style="font-size: 14px;">Keychain</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20470719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20470719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="studs">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p48.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <span class="new-price">₹89/-</span>
+                <p class="card-text" style="font-size: 14px;">Studs</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20480719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20480719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="Brown-house-collection">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p49.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <h6 class="card-title">
+                  <span class="old-price">₹349/-</span> 
+                  <span class="new-price">₹249/-</span>
+                </h6>
+                <p class="card-text" style="font-size: 14px;">Creamy Cascade</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20490719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20490719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="studs">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p50.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <span class="new-price">₹89/-</span>
+                <p class="card-text" style="font-size: 14px;">Studs</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20500719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20500719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="studs">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p51.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <span class="new-price">₹89/-</span>
+                <p class="card-text" style="font-size: 14px;">Studs</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20510719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20510719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="indian-collection">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p52.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <span class="new-price">₹89/-</span>
+                <p class="card-text" style="font-size: 14px;">Studs</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20520719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20520719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="keychains">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p53.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <h6 class="card-title">
+                  <span class="old-price">₹149/-</span> 
+                  <span class="new-price">₹99/-</span>
+                </h6>
+                <p class="card-text" style="font-size: 14px;">Keychain</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20530719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20530719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="studs">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p54.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <span class="new-price">₹89/-</span>
+                <p class="card-text" style="font-size: 14px;">Studs</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20540719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20540719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="Brown-house-collection">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p55.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <h6 class="card-title">
+                  <span class="old-price">₹349/-</span> 
+                  <span class="new-price">₹249/-</span>
+                </h6>
+                <p class="card-text" style="font-size: 14px;">Mocha Leaves</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20550719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20550719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="studs">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p56.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <span class="new-price">₹89/-</span>
+                <p class="card-text" style="font-size: 14px;">Studs</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20560719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20560719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="indian-collection">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p57.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <h6 class="card-title">
+                  <span class="old-price">₹149/-</span> 
+                  <span class="new-price">₹99/-</span>
+                </h6>
+                <p class="card-text" style="font-size: 14px;">Keychain</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20570719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20570719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="studs">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p58.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <span class="new-price">₹89/-</span>
+                <p class="card-text" style="font-size: 14px;">Studs</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20580719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20580719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="studs">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p59.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <span class="new-price">₹89/-</span>
+                <p class="card-text" style="font-size: 14px;">Studs</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20590719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20590719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="Bookmarks">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p60.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <h6 class="card-title">
+                  <span class="old-price">₹149/-</span> 
+                  <span class="new-price">₹99/-</span>
+                </h6>
+                <p class="card-text" style="font-size: 14px;">Bookmark</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20600719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20600719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="studs">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p61.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <span class="new-price">₹89/-</span>
+                <p class="card-text" style="font-size: 14px;">Studs</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20610719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20610719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="studs">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p62.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <span class="new-price">₹89/-</span>
+                <p class="card-text" style="font-size: 14px;">Studs</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20620719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20620719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="studs">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p63.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <span class="new-price">₹89/-</span>
+                <p class="card-text" style="font-size: 14px;">Studs</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20630719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20630719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="Kleizin-special">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p64.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <h6 class="card-title">
+                  <span class="old-price">₹349/-</span> 
+                  <span class="new-price">₹249/-</span>
+                </h6>
+                <p class="card-text" style="font-size: 14px;">L-uxe</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20640719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20640719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="studs">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p65.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <span class="new-price">₹89/-</span>
+                <p class="card-text" style="font-size: 14px;">Studs</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20650719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20650719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="studs">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p66.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <span class="new-price">₹89/-</span>
+                <p class="card-text" style="font-size: 14px;">Studs</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20660719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20660719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="studs">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p67.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <span class="new-price">₹89/-</span>
+                <p class="card-text" style="font-size: 14px;">Studs</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20670719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20670719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="studs">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p68.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <span class="new-price">₹89/-</span>
+                <p class="card-text" style="font-size: 14px;">Studs</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20680719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20680719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="studs">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p69.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <span class="new-price">₹89/-</span>
+                <p class="card-text" style="font-size: 14px;">Studs</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20690719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20690719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="studs">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p70.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <span class="new-price">₹89/-</span>
+                <p class="card-text" style="font-size: 14px;">Studs</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20700719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20700719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                   <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="indian-collection">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p71.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <h6 class="card-title">
+                  <span class="old-price">₹149/-</span> 
+                  <span class="new-price">₹99/-</span>
+                </h6>
+                <p class="card-text" style="font-size: 14px;">Band</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20710719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20710719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                   <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="keychains">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p72.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <h6 class="card-title">
+                  <span class="old-price">₹149/-</span> 
+                  <span class="new-price">₹99/-</span>
+                </h6>
+                <p class="card-text" style="font-size: 14px;">Keychain</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20570719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20570719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                              <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="Bookmarks">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p73.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <h6 class="card-title">
+                  <span class="old-price">₹149/-</span> 
+                  <span class="new-price">₹99/-</span>
+                </h6>
+                <p class="card-text" style="font-size: 14px;">Bookmark</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20730719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20730719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                              <!-- Repeat for other products -->
+          <div class="col-6 col-md-4 col-lg-3 mb-4" data-category="Bookmarks">
+            <div class="card">
+              <div class="card-img-top">
+                <img src="images/products/p74.jpeg" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <h6 class="card-title">
+                  <span class="old-price">₹149/-</span> 
+                  <span class="new-price">₹99/-</span>
+                </h6>
+                <p class="card-text" style="font-size: 14px;">Bookmark</p>
+                <div class="detail-box">
+                  <a href="https://wa.me/7406506829?text=I'm%20interested%20in%20product%20740719"
+                     class="btn-own-it">
+                    <i class="fab fa-whatsapp"></i><span>Order!</span>
+                  </a>
+                  <a href="https://wa.me/7406506829?text=I%20want%20to%20customise%20product%20740719"
+                     class="btn-customise mt-2">
+                    Customise
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- end shop section -->
+<script>
+  // Handle dropdown button click to toggle dropdown visibility
+document.querySelector('.dropdown-btn').addEventListener('click', function() {
+  const dropdownContent = document.querySelector('.dropdown-content');
+  dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+});
+
+// Handle dropdown item clicks to filter products
+document.querySelectorAll('.dropdown-content a').forEach(function(item) {
+  item.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default link behavior
+
+    // Get the filter value from the clicked item
+    const filterValue = this.getAttribute('data-filter');
+    
+    // Get all product cards
+    const productCards = document.querySelectorAll('#product-grid .col-6');
+
+    // Show or hide product cards based on filter value
+    productCards.forEach(function(card) {
+      if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+        card.style.display = 'block'; // Show card
+      } else {
+        card.style.display = 'none'; // Hide card
+      }
+    });
+
+    // Close dropdown after selection
+    document.querySelector('.dropdown-content').style.display = 'none';
+  });
+});
+</script>
+
+    <!-- info section -->
+    <section class="info_section  layout_padding2-top">
+    <div class="social_container">
+      <div class="social_box">
+        <a href="https://www.facebook.com/kleizin">
+          <i class="fab fa-facebook" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.instagram.com/kleizin.co/">
+          <i class="fab fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a href="https://chat.whatsapp.com/J1w8EFE6vrDF8a1kTOxHAK">
+          <i class="fab fa-whatsapp" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+    <div class="info_container ">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-6">
+            <h6>
+              ABOUT US
+            </h6>
+            <p>
+              We're Sijal and Fiza, sisters and creators of Kleizin. We create unique polymer clay and resin accessories at affordable prices. Each piece is handmade with love and care, perfect for adding a touch of charm to your look.
+
+            </p>
+          </div>
+          <div class="col-md-6 col-lg-6">
+            <h6>
+              CONTACT US
+            </h6>
+            <div class="info_link-box">
+              <a href="">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span> Belagavi, Karnataka - India  </span>
+              </a>
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>+91 7406506829</span>
+              </a>
+              <a href="">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span> kleizinbysaf@gmail.com</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer section -->
+    <footer class=" footer_section">
+      <div class="container">
+        <p>
+          &copy; <span id="displayYear"></span> All Rights Reserved By SAF
+        </p>
+      </div>
+    </footer>
+    <!-- footer section -->
+
+  </section>
+    <!-- end info section -->
+  </div>
+
+
+
+  <!-- Scripts -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="js/custom.js"></script>
+</body>
+
+</html>
